@@ -39,5 +39,5 @@ Parameters:
 ## Problem
 1. Pototype layer haven't correctly imlement
 2. Model only save `faster_rcnn_fe_extractor`
-3. Currently omly try on image
+3. Currently only try on image
 4. When try on prediction, `detect_objects.py` doesn't have any output.
