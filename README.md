@@ -8,6 +8,7 @@
 Download from [Here](https://drive.google.com/drive/folders/1NGOnVfMcpzedTR0NurP05FXd8zxsF9JI?usp=sharing)
 
 Place in those position:
+
     Faster R-CNN\training\ckpt-26.data-00000-of-00001
     Faster R-CNN\models\inference_graph\checkpoint\ckpt-0.data-00000-of-00001
     Faster R-CNN\models\inference_graph\saved_model\variables\variables.data-00000-of-00001
