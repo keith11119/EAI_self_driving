@@ -5,8 +5,8 @@
 [Here](https://bdd-data.berkeley.edu/)
 
 ## Pretrain model
-For `vgg16` [Here](https://www.dropbox.com/s/s3brpk0bdq60nyb/vgg16_caffe.pth?dl=0)
-For `RegNet101` [Here](https://www.dropbox.com/s/iev3tkbz5wyyuz9/resnet101_caffe.pth?dl=0)
+1. For `vgg16` [Here](https://www.dropbox.com/s/s3brpk0bdq60nyb/vgg16_caffe.pth?dl=0)
+2. For `RegNet101` [Here](https://www.dropbox.com/s/iev3tkbz5wyyuz9/resnet101_caffe.pth?dl=0)
 
 ## Training on pascal_voc
 For `vgg16` CUDA_VISIBLE_DEVICES=$GPU_ID python trainval_net.py \
