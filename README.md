@@ -9,28 +9,26 @@
 2. For `RegNet101` [Here](https://www.dropbox.com/s/iev3tkbz5wyyuz9/resnet101_caffe.pth?dl=0)
 
 ## Training on pascal_voc
-For `vgg16` CUDA_VISIBLE_DEVICES=$GPU_ID python trainval_net.py \
+  CUDA_VISIBLE_DEVICES=0 python trainval_net.py \
                    --dataset pascal_voc --net vgg16 \
-                   --bs $BATCH_SIZE --nw $WORKER_NUMBER \
-                   --lr $LEARNING_RATE --lr_decay_step $DECAY_STEP \
+                   --epochs 1 --bs 4 --nw 0 \
+                   --lr 1e-3 --lr_decay_step 5 \
                    --cuda
-                   
-For `RgeNot101`  CUDA_VISIBLE_DEVICES=$GPU_ID python trainval_net.py \
-                    --dataset pascal_voc --net res101 \
-                    --bs $BATCH_SIZE --nw $WORKER_NUMBER \
-                    --lr $LEARNING_RATE --lr_decay_step $DECAY_STEP \
-                    --cuda                   
+  
+## Keep training
+  CUDA_VISIBLE_DEVICES=0 python trainval_net.py \
+                   --epochs 6 --cuda \
+                   --r True --checksession 1 --checkepoch 4 --checkpoint 79855               
 
 ## Test
     python test_net.py --dataset pascal_voc --net vgg16 \
-                   --checksession $SESSION --checkepoch $EPOCH --checkpoint $CHECKPOINT \
+                   --checksession 1 --checkepoch 4 --checkpoint 79855 \
                    --cuda
                    
 ## Result
     python demo.py --net vgg16 \
-               --checksession $SESSION --checkepoch $EPOCH --checkpoint $CHECKPOINT \
-               --cuda --load_dir path/to/model/directoy
+               --checksession 1 --checkepoch 4 --checkpoint 79855 \
+               --cuda --load_dir models
 
 ## Problem
 1. Pototype layer haven't correctly implement
-2. Model has problem with training right
