@@ -32,7 +32,7 @@
 
 ## Training on pascal_voc
     CUDA_VISIBLE_DEVICES=0 python trainval_net.py \
-                   --dataset pascal_voc --net vgg16 \
+                   --dataset pascal_voc --net res101 \
                    --epochs 1 --bs 4 --nw 0 \
                    --lr 1e-3 --lr_decay_step 5 \
                    --cuda
@@ -43,11 +43,11 @@
                    --r True --checksession 1 --checkepoch 4 --checkpoint 79855               
 
 ## Test  (mAP)
-    python test_net.py --dataset pascal_voc --net vgg16 \
+    python test_net.py --dataset pascal_voc --net res101 \
                    --checksession 1 --checkepoch 4 --checkpoint 79855 \
                    --cuda
                    
 ## Result  (Image)
-    python demo.py --net vgg16 \
+    python demo.py --net res101 \
                --checksession 1 --checkepoch 4 --checkpoint 79855 \
                --cuda --load_dir models
