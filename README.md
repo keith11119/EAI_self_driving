@@ -1,5 +1,6 @@
 # EAI_self_driving
-[Github link](https://github.com/jwyang/faster-rcnn.pytorch)
+[Faster rcnn](https://github.com/jwyang/faster-rcnn.pytorch)
+[Meta Faster rcnn](https://github.com/GuangxingHan/Meta-Faster-R-CNN)
 
 ## Data
 [BDD Dataset - Official](https://bdd-data.berkeley.edu/)
@@ -40,15 +41,12 @@
                    --epochs 6 --cuda \
                    --r True --checksession 1 --checkepoch 4 --checkpoint 79855               
 
-## Test
+## Test  (mAP)
     python test_net.py --dataset pascal_voc --net vgg16 \
                    --checksession 1 --checkepoch 4 --checkpoint 79855 \
                    --cuda
                    
-## Result
+## Result  (Image)
     python demo.py --net vgg16 \
                --checksession 1 --checkepoch 4 --checkpoint 79855 \
                --cuda --load_dir models
-
-## Problem
-1. Pototype layer haven't correctly implement
