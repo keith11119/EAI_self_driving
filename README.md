@@ -4,7 +4,7 @@
 [Meta Faster rcnn](https://github.com/GuangxingHan/Meta-Faster-R-CNN)
 
 ## Data
-[BDD Dataset](https://bdd-data.berkeley.edu/)  [Paper](https://arxiv.org/pdf/1805.04687v2.pdf)
+[BDD Dataset](https://bdd-data.berkeley.edu/) - [Paper](https://arxiv.org/pdf/1805.04687v2.pdf)
 
 [Google Drive](https://drive.google.com/drive/folders/1SC_uERREbG9f5AIis83Cvb_L0dlyRWCN?usp=sharing)
 
