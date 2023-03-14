@@ -1,10 +1,10 @@
 # EAI_self_driving
-[Faster rcnn](https://github.com/jwyang/faster-rcnn.pytorch) - [Paper](https://arxiv.org/pdf/1805.04687v2.pdf)
+[Faster rcnn](https://github.com/jwyang/faster-rcnn.pytorch)
 
 [Meta Faster rcnn](https://github.com/GuangxingHan/Meta-Faster-R-CNN)
 
 ## Data
-[BDD Dataset - Official](https://bdd-data.berkeley.edu/)
+[BDD Dataset](https://bdd-data.berkeley.edu/)  [Paper](https://arxiv.org/pdf/1805.04687v2.pdf)
 
 [Google Drive](https://drive.google.com/drive/folders/1SC_uERREbG9f5AIis83Cvb_L0dlyRWCN?usp=sharing)
 
