@@ -7,6 +7,8 @@ from __future__ import absolute_import
 from __future__ import division
 from __future__ import print_function
 
+import cv2
+
 import _init_paths
 import os
 import sys
@@ -15,8 +17,6 @@ import argparse
 import pprint
 import pdb
 import time
-
-import cv2
 
 import torch
 from torch.autograd import Variable
@@ -33,6 +33,9 @@ from model.rpn.bbox_transform import bbox_transform_inv
 from model.utils.net_utils import save_net, load_net, vis_detections
 from model.faster_rcnn.vgg16 import vgg16
 from model.faster_rcnn.resnet import resnet
+
+import faulthandler
+faulthandler.enable()
 
 try:
     xrange          # Python 2

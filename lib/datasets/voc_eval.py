@@ -21,12 +21,12 @@ def parse_rec(filename):
     obj_struct['name'] = obj.find('name').text
     obj_struct['pose'] = obj.find('pose').text
     obj_struct['truncated'] = int(obj.find('truncated').text)
-    obj_struct['difficult'] = int(obj.find('difficult').text)
+    # obj_struct['difficult'] = int(obj.find('difficult').text)
     bbox = obj.find('bndbox')
-    obj_struct['bbox'] = [int(bbox.find('xmin').text),
-                          int(bbox.find('ymin').text),
-                          int(bbox.find('xmax').text),
-                          int(bbox.find('ymax').text)]
+    obj_struct['bbox'] = [int(float(bbox.find('xmin').text)),
+                          int(float(bbox.find('ymin').text)),
+                          int(float(bbox.find('xmax').text)),
+                          int(float(bbox.find('ymax').text))]
     objects.append(obj_struct)
 
   return objects
@@ -133,7 +133,8 @@ def voc_eval(detpath,
   for imagename in imagenames:
     R = [obj for obj in recs[imagename] if obj['name'] == classname]
     bbox = np.array([x['bbox'] for x in R])
-    difficult = np.array([x['difficult'] for x in R]).astype(np.bool)
+    # difficult = np.array([x['difficult'] for x in R]).astype(np.bool)
+    difficult = np.array([0 for x in R]).astype(np.bool)
     det = [False] * len(R)
     npos = npos + sum(~difficult)
     class_recs[imagename] = {'bbox': bbox,

@@ -87,7 +87,7 @@ __C.TRAIN.BG_THRESH_HI = 0.5
 __C.TRAIN.BG_THRESH_LO = 0.1
 
 # Use horizontally-flipped images during training?
-__C.TRAIN.USE_FLIPPED = True
+__C.TRAIN.USE_FLIPPED = False
 
 # Train bounding-box regressors
 __C.TRAIN.BBOX_REG = True
@@ -371,7 +371,7 @@ def cfg_from_file(filename):
   """Load a config file and merge it into the default options."""
   import yaml
   with open(filename, 'r') as f:
-    yaml_cfg = edict(yaml.load(f))
+    yaml_cfg = edict(yaml.load(f, Loader=yaml.FullLoader))
 
   _merge_a_into_b(yaml_cfg, __C)
 
