@@ -16,11 +16,11 @@
 3. Create `VOCdevkit2007` folder and put `VOC2007` in it
 
 <pre><code>data
-      |----- pretrained_model
-              |----- vgg16_caffe.pth
-              |----- resnet101_caffe.pth
-      |----- VOCdevkit2007
-              |----- VOC2007
+  |----- pretrained_model
+          |----- vgg16_caffe.pth
+          |----- resnet101_caffe.pth
+  |----- VOCdevkit2007
+          |----- VOC2007
 </code></pre>
         
 ## Install
