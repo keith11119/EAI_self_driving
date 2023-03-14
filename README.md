@@ -14,6 +14,7 @@
 1. Create `data` folder
 2. Create `pretrained_model` folder and put Pretrain model in it
 3. Create `VOCdevkit2007` folder and put `VOC2007` in it
+
     data
       |----- pretrained_model
               |----- vgg16_caffe.pth
