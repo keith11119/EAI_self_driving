@@ -15,12 +15,13 @@
 2. Create `pretrained_model` folder and put Pretrain model in it
 3. Create `VOCdevkit2007` folder and put `VOC2007` in it
 
-    data
+<pre><code>data
       |----- pretrained_model
               |----- vgg16_caffe.pth
               |----- resnet101_caffe.pth
       |----- VOCdevkit2007
               |----- VOC2007
+</code></pre>
         
 ## Install
     pip install -r requirements.txt
