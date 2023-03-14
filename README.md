@@ -1,5 +1,5 @@
 # EAI_self_driving
-[Faster rcnn](https://github.com/jwyang/faster-rcnn.pytorch)
+[Faster rcnn](https://github.com/jwyang/faster-rcnn.pytorch) - [Paper](https://arxiv.org/pdf/1805.04687v2.pdf)
 
 [Meta Faster rcnn](https://github.com/GuangxingHan/Meta-Faster-R-CNN)
 
