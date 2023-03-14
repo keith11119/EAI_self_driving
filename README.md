@@ -3,6 +3,7 @@
 
 ## Data
 [BDD Dataset - Official](https://bdd-data.berkeley.edu/)
+
 [Google Drive](https://drive.google.com/drive/folders/1SC_uERREbG9f5AIis83Cvb_L0dlyRWCN?usp=sharing)
 
 ## Pretrain model
@@ -17,24 +18,24 @@
   data
     |----- pretrained_model
         |----- vgg16_caffe.pth
-        |_____ resnet101_caffe.pth
-    |_____ VOCdevkit2007
-        |_____ VOC2007
+        |----- resnet101_caffe.pth
+    |----- VOCdevkit2007
+        |----- VOC2007
         
 ## Install
-  pip install -r requirements.txt
-  cd lib
-  sh make.sh
+    pip install -r requirements.txt
+    cd lib
+    sh make.sh
 
 ## Training on pascal_voc
-  CUDA_VISIBLE_DEVICES=0 python trainval_net.py \
+    CUDA_VISIBLE_DEVICES=0 python trainval_net.py \
                    --dataset pascal_voc --net vgg16 \
                    --epochs 1 --bs 4 --nw 0 \
                    --lr 1e-3 --lr_decay_step 5 \
                    --cuda
   
 ## Keep training
-  CUDA_VISIBLE_DEVICES=0 python trainval_net.py \
+    CUDA_VISIBLE_DEVICES=0 python trainval_net.py \
                    --epochs 6 --cuda \
                    --r True --checksession 1 --checkepoch 4 --checkpoint 79855               
 
