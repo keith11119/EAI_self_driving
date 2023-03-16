@@ -28,7 +28,7 @@
 ## Install
     pip install -r requirements.txt
     cd lib
-    sh make.sh
+    sh make.sh (linux / mac)     |  python setup.py build develop
 
 ## Training on pascal_voc
     CUDA_VISIBLE_DEVICES=0 python trainval_net.py \
